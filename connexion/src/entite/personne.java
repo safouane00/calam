@@ -5,6 +5,8 @@
  */
 package entite;
 
+import java.io.InputStream;
+
 /**
  *
  * @author safouane
@@ -14,6 +16,7 @@ public class personne {
     private String login ; 
     private String mdp ;
     private String mail ;
+    private InputStream image ;
 
     public int getId() {
         return id;
@@ -47,23 +50,37 @@ public class personne {
         this.mail = mail;
     }
 
-    public personne(String login, String mdp, String mail) {
+    public InputStream getImage() {
+        return image;
+    }
+
+    public void setImage(InputStream image) {
+        this.image = image;
+    }
+
+    public personne(String login, String mdp, String mail, InputStream image) {
         this.login = login;
         this.mdp = mdp;
         this.mail = mail;
+        this.image = image;
     }
 
-    public personne(int id, String login, String mdp, String mail) {
+    public personne(int id, String login, String mdp, String mail, InputStream image) {
         this.id = id;
         this.login = login;
         this.mdp = mdp;
         this.mail = mail;
+        this.image = image;
     }
 
     @Override
     public String toString() {
-        return "personne{" + "id=" + id + ", login=" + login + ", mdp=" + mdp + ", mail=" + mail + '}';
+        return "personne{" + "id=" + id + ", login=" + login + ", mdp=" + mdp + ", mail=" + mail + ", image=" + image + '}';
     }
+
+
+
+    
   
     
 
