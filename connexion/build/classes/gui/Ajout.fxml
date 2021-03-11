@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjoutController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="6.0" prefHeight="388.0" prefWidth="245.0" style="-fx-background-color: #28252e;">
+         <children>
+            <TextField fx:id="tflogin" layoutX="48.0" layoutY="29.0" prefHeight="31.0" prefWidth="157.0" promptText="login" />
+            <TextField fx:id="tfmail" layoutX="48.0" layoutY="75.0" prefHeight="31.0" prefWidth="157.0" promptText="mail" />
+            <TextField fx:id="tfmdp" layoutX="48.0" layoutY="123.0" prefHeight="31.0" prefWidth="157.0" promptText="mot de passe" />
+            <Button fx:id="btnajout" layoutX="22.0" layoutY="236.0" mnemonicParsing="false" onAction="#iajout" prefHeight="40.0" prefWidth="97.0" text="ajout">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Button fx:id="taff" layoutX="138.0" layoutY="319.0" mnemonicParsing="false" onAction="#tafficher" prefHeight="40.0" prefWidth="97.0" text="afficher">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnupdate" layoutX="137.0" layoutY="236.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="97.0" text="update">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btndelete" layoutX="22.0" layoutY="319.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="97.0" text="delete">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tftype" layoutX="48.0" layoutY="171.0" prefHeight="31.0" prefWidth="157.0" promptText="type" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" layoutX="264.0" layoutY="7.0" prefHeight="333.0" prefWidth="323.0">
+         <columns>
+            <TableColumn fx:id="tid" prefWidth="36.0" text="id" />
+            <TableColumn fx:id="tlogin" prefWidth="94.0" text="login" />
+            <TableColumn fx:id="tmail" prefWidth="110.0" text="mail" />
+            <TableColumn fx:id="ttype" prefWidth="82.0" text="type" />
+         </columns>
+      </TableView>
+      <Button fx:id="btntriemail" layoutX="268.0" layoutY="347.0" mnemonicParsing="false" onAction="#triemail" text="trie par mail" />
+      <Button fx:id="btntrielogin" layoutX="380.0" layoutY="347.0" mnemonicParsing="false" onAction="#trielogin" text="trie par login" />
+      <Button fx:id="rech" layoutX="497.0" layoutY="347.0" mnemonicParsing="false" onAction="#recherche" text="recherche" />
+   </children>
+</AnchorPane>

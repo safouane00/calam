@@ -6,7 +6,7 @@
 package connexion;
 
 import service.servicePersonne;
-import entite.personne;
+import entite.Personne;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.*;
@@ -26,8 +26,9 @@ public class Connexion {
      */
     public static void main(String[] args) {
         servicePersonne ser = new servicePersonne();
+        String o = ser.im() ;
         Scanner sc = new Scanner(System.in);
-        personne p1 = new personne("mohamed", "sana", "safouane", null);
+        Personne p1 = new Personne("mohamed", "sana", "safouane", null,null);
         int x = 100;
         while (x != 0) {
 
@@ -88,7 +89,7 @@ public class Connexion {
                     break;
 
                 case 4:
-                    List<personne> list = null;
+                    List<Personne> list = null;
 
                     System.out.println(" 1.trie par mail \n 2.trie par login \n 3.afficher tel qu'il est \n 4.afficher user specifier");
                     int y = sc.nextInt();
@@ -127,7 +128,6 @@ public class Connexion {
             }
 
         }
-        ser.im();
 
 //        try {
 //            ser.ajouter(p1);

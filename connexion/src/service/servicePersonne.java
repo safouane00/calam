@@ -5,7 +5,7 @@
  */
 package service;
 
-import entite.personne;
+import entite.Personne;
 import Utils.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,13 +17,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import java.io.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author safouane
  */
-public class servicePersonne implements Iservice<personne> {
+public class servicePersonne implements Iservice<Personne> {
 
     private Connection con = DataSource.getInstance().getConnection();
 
@@ -38,13 +40,12 @@ public class servicePersonne implements Iservice<personne> {
 
     }
 
-    public InputStream im() {
+    public String im() {
 
         String s = "";
         JFileChooser filechooser = new JFileChooser();
         filechooser.setCurrentDirectory(new File("C:\\Users\\safou\\Desktop"));
         int result = filechooser.showSaveDialog(null);
-       
 
         if (result == JFileChooser.APPROVE_OPTION) {
             System.out.println("image ajouter");
@@ -57,41 +58,35 @@ public class servicePersonne implements Iservice<personne> {
             }
         }
 
-        InputStream imgg = null;
-
-        try {
-            imgg = new FileInputStream(new File(s));
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(servicePersonne.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return imgg;
+        return s;
 
     }
 
     @Override
-    public void ajouter(personne t) throws SQLException {
-        t.setImage(im());
-        String req1 = "INSERT INTO `personne` (`id`, `login`, `mail`, `mdp`,`image`) VALUES (NULL, '" + t.getLogin() + "', '" + t.getMail() + "', '" + t.getMdp() + "', '" + t.getImage() + "');";
+    public void ajouter(Personne t) throws SQLException {
+//        t.setImage(im());
+        String req1 = "INSERT INTO `personne` (`id`, `login`, `mail`, `mdp`,`image`,`type`) VALUES (NULL, '" + t.getLogin() + "', '" + t.getMail() + "', '" + t.getMdp() + "', '" + t.getImage() + "', '" + t.getType() + "');";
         ste.executeUpdate(req1);
     }
 
     @Override
-    public void supprimer(personne t) throws SQLException {
-        String req1 = "DELETE FROM `personne` WHERE (id ='" + t.getId() + "');";
+    public void supprimer(Personne t) throws SQLException {
+        String req1 = "DELETE FROM `personne` WHERE (mail ='" + t.getMail() + "');";
         ste.executeUpdate(req1);
     }
 
     @Override
-    public void update(personne t) throws SQLException {
-        String req1 = "UPDATE personne SET login ='" + t.getLogin() + "' ,mail ='" + t.getMail() + "', mdp ='" + t.getMdp() + "' WHERE (id ='" + t.getId() + "' ) ;";
+    public void update(Personne t) throws SQLException {
+        //        t.setImage(im());
+        t.setImage(null);
+        String req1 = "UPDATE personne SET login ='" + t.getLogin() + "' ,mail ='" + t.getMail() + "', mdp ='" + t.getMdp() + "', image ='" + t.getImage() +"', type ='" + t.getType() + "' WHERE (mail ='" + t.getMail() + "') ;";
         ste.executeUpdate(req1);
     }
 
     @Override
-    public List<personne> readall1() throws SQLException {
+    public List<Personne> readall1() throws SQLException {
 
-        List<personne> list = new ArrayList<>();
+        ObservableList<Personne> list = FXCollections.observableArrayList();
         String req2 = "select * from personne ORDER BY mail ";
 
         ResultSet rs = ste.executeQuery(req2);
@@ -100,9 +95,11 @@ public class servicePersonne implements Iservice<personne> {
             String login = rs.getString("login");
             String mail = rs.getString(3);
             String mdp = rs.getString("mdp");
-            InputStream image = rs.getBinaryStream("image");
+            String image = rs.getString("image");
+                        String type = rs.getString("type");
+
             // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
-            personne p = new personne(id, login, mail, mdp, image);
+            Personne p = new Personne(id, login, mdp, mail, image,type);
             list.add(p);
         }
 
@@ -110,9 +107,9 @@ public class servicePersonne implements Iservice<personne> {
     }
 
     @Override
-    public List<personne> readall2() throws SQLException {
+    public List<Personne> readall2() throws SQLException {
 
-        List<personne> list = new ArrayList<>();
+        ObservableList<Personne> list = FXCollections.observableArrayList();
         String req2 = "select * from personne ORDER BY login ";
 
         ResultSet rs = ste.executeQuery(req2);
@@ -121,9 +118,11 @@ public class servicePersonne implements Iservice<personne> {
             String login = rs.getString("login");
             String mail = rs.getString(3);
             String mdp = rs.getString("mdp");
-            InputStream image = rs.getBinaryStream("image");
+            String image = rs.getString("image");            // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
+                                  String type = rs.getString("type");
+
             // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
-            personne p = new personne(id, login, mail, mdp, image);
+            Personne p = new Personne(id, login, mdp, mail, image,type);
             list.add(p);
         }
 
@@ -131,9 +130,9 @@ public class servicePersonne implements Iservice<personne> {
     }
 
     @Override
-    public List<personne> readall() throws SQLException {
+    public List<Personne> readall() throws SQLException {
 
-        List<personne> list = new ArrayList<>();
+        ObservableList<Personne> list = FXCollections.observableArrayList();
         String req2 = "select * from personne";
 
         ResultSet rs = ste.executeQuery(req2);
@@ -142,19 +141,21 @@ public class servicePersonne implements Iservice<personne> {
             String login = rs.getString("login");
             String mail = rs.getString(3);
             String mdp = rs.getString("mdp");
-            InputStream image = rs.getBinaryStream("image");
+            String image = rs.getString("image");
             // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
-            personne p = new personne(id, login, mail, mdp, image);
-            list.add(p);
+                       String type = rs.getString("type");
+
+            // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
+            Personne p = new Personne(id, login, mdp, mail, image,type);            list.add(p);
         }
 
         return list;
     }
 
     @Override
-    public List<personne> readall4(String mail1) throws SQLException {
+    public List<Personne> readall4(String mail1) throws SQLException {
 
-        List<personne> list = new ArrayList<>();
+        ObservableList<Personne> list = FXCollections.observableArrayList();
         String req2 = "select * FROM `personne` WHERE (mail ='" + mail1 + "');";
 
         ResultSet rs = ste.executeQuery(req2);
@@ -163,13 +164,36 @@ public class servicePersonne implements Iservice<personne> {
             String login = rs.getString("login");
             String mail = rs.getString("mail");
             String mdp = rs.getString("mdp");
-            InputStream image = rs.getBinaryStream("image");
+            String image = rs.getString("image");            // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
+                       String type = rs.getString("type");
+
             // System.out.println(" id :" + id + " nom :" + nom + " prenom :" + prenom);
-            personne p = new personne(id, login, mail, mdp, image);
-            list.add(p);
+            Personne p = new Personne(id, login, mdp, mail, image,type);            list.add(p);
         }
 
         return list;
+    }
+
+    @Override
+    public String login(String mail, String pass) {
+
+        try {
+            String sql = "SELECT * FROM personne WHERE mail = '" + mail + "' AND mdp = '" + pass + "';";
+            ResultSet resultSet = ste.executeQuery(sql);
+
+            if (resultSet.next()) {
+                
+                return ("exist et "+resultSet.getString("type"));
+                
+            } else {
+                return ("non exist");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return ("non exist");
+        }
+
     }
 
 }
