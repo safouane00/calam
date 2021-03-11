@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailsArticleController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="1.0" prefHeight="182.0" prefWidth="966.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="130.0" layoutY="44.0" text="Calma" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="136.0" layoutY="105.0" text="App Management" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="GG" layoutX="53.0" layoutY="103.0" size="60" />
+         </children>
+      </Pane>
+      <TextField fx:id="Title" layoutX="76.0" layoutY="215.0" text="title" />
+      <TextArea fx:id="description" layoutX="75.0" layoutY="255.0" prefHeight="202.0" prefWidth="195.0" text="description" />
+      <Button fx:id="ajouter" layoutX="428.0" layoutY="487.0" mnemonicParsing="false" onAction="#ajouterarticle" prefHeight="20.0" prefWidth="75.0" text="Valider" />
+      <Button fx:id="cancel" layoutX="534.0" layoutY="487.0" mnemonicParsing="false" onAction="#annuler" prefHeight="20.0" prefWidth="75.0" text="Cancel" />
+      <TextField fx:id="nbr_like" layoutX="115.0" layoutY="475.0" prefHeight="25.0" prefWidth="104.0" text="nbr_like" />
+      <TextField fx:id="image" layoutX="391.0" layoutY="303.0" text="image" />
+   </children>
+</AnchorPane>
