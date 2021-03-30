@@ -1,0 +1,55 @@
+/*
+ * Empty Stylesheet file.
+ */
+.search-box{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 140;
+    
+}
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #d3d3d3;
+    
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 , 10.0);
+    
+}
+
+.choix{
+    -fx-background-color: #f16c31;
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+        
+}
+
+.ajoutAuPanier{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 100;
+}
+
+.LivraisonGratuite{
+    -fx-background-color: #d3d3d3;
+    -fx-background-radius: 30;
+}
+.achatEnligne{
+    -fx-background-color: #baeac3;
+    -fx-background-radius: 30;
+}
+
+.item{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 30;
+}
