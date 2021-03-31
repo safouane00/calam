@@ -8,6 +8,7 @@ package gui;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -21,6 +22,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javax.swing.JOptionPane;
 import service.servicePersonne;
 
 /**
@@ -48,7 +50,7 @@ public class AuthentifierController implements Initializable {
     }
 
     @FXML
-    private void login(ActionEvent event) throws IOException {
+    private void login(ActionEvent event) throws IOException, SQLException {
         servicePersonne ser = new servicePersonne();
         String bool = ser.login(tmail.getText(), tmdp.getText());
         if (bool.equals("exist et admin")) {
@@ -56,14 +58,16 @@ public class AuthentifierController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/Ajout.fxml"));
             Parent root = loader.load();
             tmail.getScene().setRoot(root);
-
+            
         } else if (bool.equals("exist et user")) {
             result.setText("connected succefully user");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/user1.fxml"));
             Parent root = loader.load();
             tmail.getScene().setRoot(root);
+            User1Controller dtp = loader.getController() ;
+            dtp.tafficher(tmail.getText());
         } else {
-            result.setText("error");
+            JOptionPane.showMessageDialog(null, " try again");
         }
 
     }

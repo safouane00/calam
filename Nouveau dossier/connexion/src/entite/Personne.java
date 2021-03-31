@@ -6,7 +6,9 @@
 package entite;
 
 import java.io.InputStream;
+import java.time.LocalDate;
 import java.util.*;
+import javafx.scene.control.DatePicker;
 
 /**
  *
@@ -46,6 +48,8 @@ public class Personne {
         this.image = image;
         this.type = type;
     }
+
+ 
 
     public int getId() {
         return id;

@@ -79,7 +79,7 @@ public class servicePersonne implements Iservice<Personne> {
     public void update(Personne t) throws SQLException {
         //        t.setImage(im());
         t.setImage(null);
-        String req1 = "UPDATE personne SET login ='" + t.getNom() + "', '" + t.getMail() + "', '" + t.getMdp() + "', '" + t.getImage() + "', '" + t.getType() + "', '" + t.getPrenom() + "', '" + t.getSex() + "', '" + t.getDate() + "' WHERE (mail ='" + t.getMail() + "') ;";
+        String req1 = "UPDATE personne SET nom ='" + t.getNom() + "',mail = '" + t.getMail() + "',mdp = '" + t.getMdp() + "',image = '" + t.getImage() + "', type ='" + t.getType() + "', prenom ='" + t.getPrenom() + "',sex = '" + t.getSex() + "',date = '" + t.getDate() + "' WHERE (mail ='" + t.getMail() + "') ;";
         ste.executeUpdate(req1);
     }
 

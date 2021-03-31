@@ -7,30 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AuthentifierController">
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AuthentifierController">
    <children>
-      <PasswordField fx:id="tmdp" layoutX="197.0" layoutY="192.0" prefHeight="31.0" prefWidth="187.0" />
-      <TextField fx:id="tmail" layoutX="194.0" layoutY="106.0" />
+      <PasswordField fx:id="tmdp" layoutX="367.0" layoutY="243.0" prefHeight="31.0" prefWidth="187.0" promptText="password" />
+      <TextField fx:id="tmail" layoutX="366.0" layoutY="178.0" prefHeight="34.0" prefWidth="187.0" promptText="mail" />
       <Label fx:id="result" layoutX="202.0" layoutY="300.0" prefHeight="21.0" prefWidth="206.0" />
-      <Label layoutX="90.0" layoutY="110.0" prefHeight="22.0" prefWidth="48.0" text="Mail">
+      <Label layoutX="28.0" layoutY="1.0" onMouseClicked="#cree" prefHeight="80.0" prefWidth="187.0" text="calma" textFill="RED">
          <font>
-            <Font name="Britannic Bold" size="21.0" />
+            <Font name="Century Schoolbook Bold" size="45.0" />
          </font>
       </Label>
-      <Label layoutX="72.0" layoutY="197.0" text="Password">
+      <Button fx:id="btnlogin" layoutX="427.0" layoutY="347.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="65.0" text="login" />
+      <Label layoutX="815.0" layoutY="14.0" onMouseClicked="#cree" prefHeight="21.0" prefWidth="105.0" text="sign up" textFill="RED">
          <font>
-            <Font name="Britannic Bold" size="21.0" />
+            <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="165.0" layoutY="14.0" text="authentifier" textFill="#d72929">
+     
+      <Label layoutX="711.0" layoutY="14.0" onMouseClicked="#cree" prefHeight="21.0" prefWidth="105.0" text="sign in" textFill="RED" underline="true">
          <font>
-            <Font name="Century Schoolbook" size="45.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnlogin" layoutX="249.0" layoutY="261.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="65.0" text="login" />
-      <Label layoutX="300.0" layoutY="225.0" onMouseClicked="#cree" prefHeight="21.0" prefWidth="105.0" text="create account" textFill="#0810f2">
-         <font>
-            <Font size="13.0" />
+            <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
    </children>

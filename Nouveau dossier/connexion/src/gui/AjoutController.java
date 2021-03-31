@@ -10,6 +10,8 @@ import java.awt.Insets;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -90,7 +92,7 @@ public class AjoutController implements Initializable {
     @FXML
     private void iajout(ActionEvent event) throws SQLException {
         servicePersonne ser = new servicePersonne();
-        ser.ajouter(new Personne(tflogin.getText(), tfmdp.getText(), tfmail.getText(), null,tftype.getText()));
+        ser.ajouter(new Personne(tflogin.getText(),null, null,null , tfmdp.getText(), tfmail.getText(), null, "user"));
         JOptionPane.showMessageDialog(null, "user added succesfully");
     }
 
@@ -158,7 +160,7 @@ public class AjoutController implements Initializable {
     private void update(ActionEvent event) {
         servicePersonne ser = new servicePersonne();
         try {
-            ser.update(new Personne( tflogin.getText(), tfmdp.getText(), tfmail.getText(), null,tftype.getText()));
+            ser.update(new Personne(tflogin.getText(),null, null,null , tfmdp.getText(), tfmail.getText(), null, "user"));
         } catch (SQLException ex) {
             System.out.println(ex);
         }
@@ -169,7 +171,8 @@ public class AjoutController implements Initializable {
     private void delete(ActionEvent event) {
         servicePersonne ser = new servicePersonne();
         try {
-            ser.supprimer(new Personne(tflogin.getText(), tfmdp.getText(), tfmail.getText(), null,tftype.getText(), null, null,"2021-03-09"));
+
+            ser.supprimer(new Personne(tflogin.getText(),null, null,null , tfmdp.getText(), tfmail.getText(), null, "user"));
         } catch (SQLException ex) {
             System.out.println(ex);
         }

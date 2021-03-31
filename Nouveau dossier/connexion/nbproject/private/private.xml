@@ -4,17 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/service/Iservice.java</file>
-            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/user.fxml</file>
-            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/AjoutController.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/connexion/Mailgui.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/utils/DataSource.java</file>
+            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/authentifier.fxml</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/service/servicePersonne.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/entite/Personne.java</file>
+            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/connexion/Connexion.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/AuthentifierController.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/UserController.java</file>
             <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/User1Controller.java</file>
-            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/user1.fxml</file>
-            <file>file:/C:/Users/safou/Desktop/Nouveau%20dossier/connexion/src/gui/Ajout.fxml</file>
         </group>
     </open-files>
 </project-private>
