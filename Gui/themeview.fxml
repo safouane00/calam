@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ThemeviewController">
+   <children>
+      <Pane layoutX="20.0" layoutY="199.0" prefHeight="33.0" prefWidth="356.0">
+         <children>
+            <TextField fx:id="themeinput" layoutY="2.0" prefHeight="27.0" prefWidth="356.0" promptText="Input Theme..." style="-fx-border-color: #2D75E8;" />
+         </children>
+      </Pane>
+      <Pane prefHeight="139.0" prefWidth="1102.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="73.0" layoutY="30.0" text="Theme" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="91.0" text="Test Mangement " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="159.0" prefHeight="33.0" prefWidth="356.0">
+         <children>
+            <TextField prefHeight="27.0" prefWidth="356.0" promptText="Search..." style="-fx-border-color: #2D75E8;" />
+         </children>
+      </Pane>
+      <Button fx:id="btnadd" layoutX="388.0" layoutY="201.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="27.0" style="-fx-border-color: #2D75E8;" />
+      <FontAwesomeIconView fill="#2d75e8" glyphName="PLUS" layoutX="397.0" layoutY="220.0" />
+      <Button fx:id="btnrefresh" layoutX="1057.0" layoutY="241.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="27.0" style="-fx-border-color: #2D75E8;">
+         <graphic>
+            <FontAwesomeIconView fill="#2d75e8" glyphName="REFRESH" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnedit" layoutX="387.0" layoutY="241.0" mnemonicParsing="false" onAction="#Updatetheme" prefHeight="25.0" prefWidth="27.0" style="-fx-border-color: #2D75E8;">
+         <graphic>
+            <FontAwesomeIconView fill="#2d75e8" glyphName="PENCIL" />
+         </graphic>
+      </Button>
+      <Button fx:id="btndelete" layoutX="428.0" layoutY="201.0" mnemonicParsing="false" onAction="#deletetheme" prefHeight="25.0" prefWidth="27.0" style="-fx-border-color: #2D75E8;">
+         <graphic>
+            <FontAwesomeIconView fill="#2d75e8" glyphName="TRASH" />
+         </graphic>
+      </Button>
+      <Pane layoutX="19.0" layoutY="234.0" prefHeight="41.0" prefWidth="356.0">
+         <children>
+            <TextField fx:id="texttoupdate" layoutY="8.0" prefHeight="25.0" prefWidth="356.0" promptText="Update Theme..." style="-fx-border-color: #2D75E8;" />
+         </children>
+      </Pane>
+      <Button fx:id="saveupdate" layoutX="427.0" layoutY="241.0" mnemonicParsing="false" onAction="#save" prefHeight="27.0" prefWidth="27.0" style="-fx-border-color: #2D75E8;">
+         <graphic>
+            <FontAwesomeIconView fill="#2d75e8" glyphName="FOLDER_ALT" />
+         </graphic>
+      </Button>
+      <ListView fx:id="listtheme" layoutX="20.0" layoutY="282.0" prefHeight="253.0" prefWidth="237.0" />
+   </children>
+</AnchorPane>

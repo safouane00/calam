@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="919.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.HomeUserController">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="919.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Assets/vp.gif" />
+         </image></ImageView>
+      <Pane prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="91.0" layoutY="14.0" text="Calma" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="GG" layoutX="14.0" layoutY="73.0" size="60" />
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="125.0" layoutY="208.0" prefHeight="385.0" prefWidth="681.0" vgap="10.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="137.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnArticle" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0" style="-fx-background-color: transparent;" stylesheets="@../css/fullpackstyling.css" text="Article" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMeditation" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0" style="-fx-background-color: transparent;" stylesheets="@../css/fullpackstyling.css" text="Meditation" textFill="WHITE" GridPane.columnIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#fcfcfc" glyphName="POWER_OFF" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTest" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0" style="-fx-background-color: transparent;" stylesheets="@../css/fullpackstyling.css" text="Test" textFill="WHITE" GridPane.columnIndex="2">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUsers" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0" style="-fx-background-color: transparent;" stylesheets="@../css/fullpackstyling.css" text="Account" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="RED" glyphName="USER" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btns" contentDisplay="TOP" disable="true" mnemonicParsing="false" opacity="0.0" prefHeight="181.0" prefWidth="242.0" stylesheets="@../css/fullpackstyling.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btnProducts" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="174.0" prefWidth="223.0" style="-fx-background-color: transparent;" stylesheets="@../css/fullpackstyling.css" text="Products" textFill="WHITE" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#1fc91c" glyphName="SHOPPING_CART" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

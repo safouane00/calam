@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.BlogelementController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageviewblog1" fitHeight="150.0" fitWidth="192.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="C1" layoutX="17.0" layoutY="215.0" prefHeight="17.0" prefWidth="102.0" />
+            <Label fx:id="titreBlog1" layoutX="17.0" layoutY="250.0" prefHeight="17.0" prefWidth="123.0" />
+            <Label fx:id="idEvenement1" layoutX="63.0" layoutY="26.0" prefHeight="17.0" prefWidth="59.0" />
+            <Label fx:id="contenuBlog1" layoutX="17.0" layoutY="288.0" prefHeight="17.0" prefWidth="176.0" />
+            <Label fx:id="Lilkeblog1" layoutX="17.0" layoutY="324.0" prefHeight="17.0" prefWidth="69.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageviewblog2" fitHeight="150.0" fitWidth="185.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="C2" layoutX="17.0" layoutY="215.0" prefHeight="17.0" prefWidth="102.0" />
+            <Label fx:id="titreBlog2" layoutX="17.0" layoutY="250.0" prefHeight="17.0" prefWidth="69.0" />
+            <Label fx:id="idEvenement2" layoutX="63.0" layoutY="26.0" prefHeight="17.0" prefWidth="59.0" />
+            <Label fx:id="contenuBlog2" layoutX="17.0" layoutY="288.0" prefHeight="17.0" prefWidth="176.0" />
+            <Label fx:id="Lilkeblog2" layoutX="17.0" layoutY="324.0" prefHeight="17.0" prefWidth="69.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageviewblog3" fitHeight="150.0" fitWidth="185.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="C3" layoutX="17.0" layoutY="215.0" prefHeight="17.0" prefWidth="69.0" />
+            <Label fx:id="titreBlog3" layoutX="17.0" layoutY="250.0" prefHeight="17.0" prefWidth="69.0" />
+            <Label fx:id="idEvenement3" layoutX="63.0" layoutY="26.0" prefHeight="17.0" prefWidth="47.0" />
+            <Label fx:id="contenuBlog3" layoutX="17.0" layoutY="288.0" prefHeight="17.0" prefWidth="176.0" />
+            <Label fx:id="Lilkeblog3" layoutX="17.0" layoutY="324.0" prefHeight="17.0" prefWidth="69.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageviewblog4" fitHeight="150.0" fitWidth="185.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="C4" layoutX="17.0" layoutY="215.0" prefHeight="17.0" prefWidth="83.0" />
+            <Label fx:id="titreBlog4" layoutX="17.0" layoutY="250.0" prefHeight="17.0" prefWidth="83.0" />
+            <Label fx:id="idEvenement4" layoutX="63.0" layoutY="26.0" />
+            <Label fx:id="contenuBlog4" layoutX="17.0" layoutY="288.0" prefHeight="17.0" prefWidth="176.0" />
+            <Label fx:id="Lilkeblog4" layoutX="17.0" layoutY="324.0" prefHeight="17.0" prefWidth="69.0" />
+         </children>
+      </Pane>
+   </children>
+</HBox>

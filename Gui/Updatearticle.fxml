@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.UpdatearticleController">
+   <children>
+      <Text layoutX="17.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre" wrappingWidth="65.13671875">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="TEAL" layoutX="46.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Articles Details" wrappingWidth="245.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="17.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="116.13671875">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="65.13671875">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre j'aimes" wrappingWidth="80.13671875">
+         <font>
+            <Font name="Century Gothic" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image" wrappingWidth="65.13671875">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tt" layoutX="143.0" layoutY="116.0" />
+      <TextField fx:id="des" layoutX="143.0" layoutY="148.0" />
+      <TextField fx:id="likes" layoutX="143.0" layoutY="217.0" />
+      <TextField fx:id="imagefield" layoutX="144.0" layoutY="269.0" />
+      <Button fx:id="modifeir" layoutX="143.0" layoutY="310.0" mnemonicParsing="false" onAction="#modifierfnt" text="Modifier" />
+      <Button fx:id="annuler" layoutX="226.0" layoutY="310.0" mnemonicParsing="false" onAction="#annulerfnt" text="Annuler" />
+      <Button fx:id="browseimg" layoutX="297.0" layoutY="266.0" mnemonicParsing="false" onAction="#browseimg" prefHeight="25.0" prefWidth="45.0" text="Browse" />
+      <DatePicker fx:id="Date" layoutX="140.0" layoutY="182.0" prefHeight="25.0" prefWidth="157.0" />
+      <Label fx:id="artid" layoutX="297.0" layoutY="369.0" opacity="0.0" prefHeight="17.0" prefWidth="45.0" />
+   </children>
+</AnchorPane>

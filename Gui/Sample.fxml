@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="349.0" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.SampleController">
+   <children>
+      <Label fx:id="tt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="174.0" text="Méditation">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <ImageView fx:id="img" fitHeight="117.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../meditation.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="desc" prefHeight="48.0" prefWidth="306.0" text="La pratique intensive du yoga et de la méditation ...">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="119.0" text="J'aimes" textAlignment="CENTER">
+         <font>
+            <Font name="Broadway" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="aime" alignment="CENTER" prefHeight="17.0" prefWidth="116.0" text="10" textAlignment="CENTER" textFill="#e40d0d" />
+      <Rating fx:id="ratingid" prefHeight="32.0" prefWidth="153.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addraiting" prefHeight="25.0" prefWidth="150.0" text="submit">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+      <TextField fx:id="commentaire" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="192.0" promptText="commenter" />
+      <Button fx:id="addcom" layoutX="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addcomment" prefHeight="25.0" prefWidth="73.0" text="ajouter " textAlignment="CENTER">
+         <padding>
+            <Insets left="7.0" />
+         </padding></Button>
+   </children>
+</VBox>
