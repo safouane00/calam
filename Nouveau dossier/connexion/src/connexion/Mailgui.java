@@ -28,7 +28,7 @@ public class Mailgui extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/authentifier.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);        
-        primaryStage.setTitle("ajouter");
+        primaryStage.setTitle("calma");
         primaryStage.setScene(scene);
         primaryStage.show();
         

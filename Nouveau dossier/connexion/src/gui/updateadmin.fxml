@@ -11,26 +11,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.User1Controller">
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UpdateadminController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="3.0" prefHeight="532.0" prefWidth="894.0">
+      <AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="894.0">
          <children>
-            <ImageView fx:id="img" fitHeight="532.0" fitWidth="894.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img" fitHeight="559.0" fitWidth="927.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
             <TextField fx:id="tfnom" layoutX="352.0" layoutY="133.0" prefHeight="31.0" prefWidth="187.0" promptText="nom" />
             <TextField fx:id="tfmail" layoutX="352.0" layoutY="217.0" prefHeight="31.0" prefWidth="187.0" promptText="mail" />
-            <Button fx:id="btnupdate" layoutX="397.0" layoutY="411.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="97.0" text="update">
+            <Button fx:id="btnupdate" layoutX="466.0" layoutY="455.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="97.0" text="update">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Button>
             <TextField fx:id="tfprenom" layoutX="352.0" layoutY="175.0" promptText="prenom" />
             <DatePicker fx:id="tfdate" layoutX="354.0" layoutY="303.0" prefHeight="31.0" prefWidth="187.0" promptText="birth date" />
-            <Label layoutX="337.0" layoutY="357.0" text="sex :" textFill="RED">
+            <Label layoutX="337.0" layoutY="404.0" text="sex :" textFill="RED">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <RadioButton fx:id="tffemme" layoutX="385.0" layoutY="357.0" mnemonicParsing="false" text="femme" textFill="RED">
+            <RadioButton fx:id="tffemme" layoutX="385.0" layoutY="404.0" mnemonicParsing="false" text="femme" textFill="RED">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -38,7 +38,7 @@
                   <ToggleGroup fx:id="gender1" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="tfhomme" layoutX="474.0" layoutY="357.0" mnemonicParsing="false" text="homme" textFill="RED" toggleGroup="$gender1">
+            <RadioButton fx:id="tfhomme" layoutX="474.0" layoutY="404.0" mnemonicParsing="false" text="homme" textFill="RED" toggleGroup="$gender1">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -54,6 +54,12 @@
                </font>
             </Label>
             <PasswordField fx:id="tfmdp" layoutX="354.0" layoutY="259.0" promptText="mot de passe" />
+            <TextField fx:id="tftype" layoutX="355.0" layoutY="353.0" promptText="type" />
+            <Button fx:id="btndelete" layoutX="333.0" layoutY="455.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="97.0" text="delete">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

@@ -20,6 +20,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javax.swing.JOptionPane;
@@ -40,6 +42,8 @@ public class AuthentifierController implements Initializable {
     private Label result;
     @FXML
     private Button btnlogin;
+    @FXML
+    private ImageView img;
 
     /**
      * Initializes the controller class.
@@ -47,24 +51,27 @@ public class AuthentifierController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        Image image = new Image("/gui/arrrsttuqqx1.jpeg");
+        img.setImage(image);
     }
 
     @FXML
     private void login(ActionEvent event) throws IOException, SQLException {
+
         servicePersonne ser = new servicePersonne();
         String bool = ser.login(tmail.getText(), tmdp.getText());
         if (bool.equals("exist et admin")) {
             result.setText("connected succefully admin");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/Ajout.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/afficheradmin.fxml"));
             Parent root = loader.load();
             tmail.getScene().setRoot(root);
-            
+
         } else if (bool.equals("exist et user")) {
             result.setText("connected succefully user");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/user1.fxml"));
             Parent root = loader.load();
             tmail.getScene().setRoot(root);
-            User1Controller dtp = loader.getController() ;
+            User1Controller dtp = loader.getController();
             dtp.tafficher(tmail.getText());
         } else {
             JOptionPane.showMessageDialog(null, " try again");
